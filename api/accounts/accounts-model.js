@@ -18,11 +18,12 @@ const create = async account => {
 
 const updateById = async (id, account) => {
   // DO YOUR MAGIC
-  
+  return db("budget").where({id}).update(account)
 }
 
 const deleteById = async id => {
   // DO YOUR MAGIC
+  return db('account').where('id', id).del();
 }
 
 module.exports = {
